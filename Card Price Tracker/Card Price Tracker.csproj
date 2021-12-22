@@ -43,9 +43,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Remove="ClientApp\card-details\card-details.component.spec.ts" />
+    <TypeScriptCompile Remove="ClientApp\card-details\card-details.component.ts" />
     <TypeScriptCompile Remove="ClientApp\cards.service.ts" />
+    <TypeScriptCompile Remove="ClientApp\cards\cards.component.spec.ts" />
+    <TypeScriptCompile Remove="ClientApp\cards\cards.component.ts" />
+    <TypeScriptCompile Remove="ClientApp\my-binder\my-binder.component.spec.ts" />
+    <TypeScriptCompile Remove="ClientApp\my-binder\my-binder.component.ts" />
     <TypeScriptCompile Remove="ClientApp\mybinder.service.ts" />
+    <TypeScriptCompile Remove="ClientApp\sell-card\sell-card.component.spec.ts" />
+    <TypeScriptCompile Remove="ClientApp\sell-card\sell-card.component.ts" />
     <TypeScriptCompile Remove="ClientApp\sellcards.service.ts" />
+    <TypeScriptCompile Remove="ClientApp\want-cards\want-cards.component.spec.ts" />
+    <TypeScriptCompile Remove="ClientApp\want-cards\want-cards.component.ts" />
     <TypeScriptCompile Remove="ClientApp\wantcards.service.ts" />
   </ItemGroup>
 

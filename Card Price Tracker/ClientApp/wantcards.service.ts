@@ -4,13 +4,19 @@ import { Inject, Injectable } from '@angular/core';
 @Injectable({
   providedIn:'root'
 })
+
 export class WantcardsService {
   constructor(private http: HttpClient, @Inject('BASE_URL') private baseUrl: string) {
    
 
   }
+
   DisplayWantedCards(): any {
     return this.http.get(this.baseUrl + `api/WantCards/wantedcards`);
+  }
+
+  GetById(): any {
+    return this.http.get(this.baseUrl + `api/WantCards/cardById`);
   }
 
   AddWantCards(cardId: string, price: number): any {
@@ -26,7 +32,7 @@ export class WantcardsService {
   }
 
   GetCardId(cardId: string): any {
-    return this.http.get('https://api.scryfall.com/cards/${cardId}')
+    return this.http.get('https://api.scryfall.com/cards/' + cardId) 
   }
 
 }

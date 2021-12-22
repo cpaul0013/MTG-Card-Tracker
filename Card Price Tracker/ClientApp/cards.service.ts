@@ -7,7 +7,12 @@ export class CardsService {
 
   }
 
+  CardSearch(cardName: string): any {
+    return this.http.get('https://api.scryfall.com/cards/named?fuzzy=' + cardName)
 
+  }
   
-
+  GetCardId(cardId: string): any {
+    return this.http.get('https://api.scryfall.com/cards/${cardId}')
+  }
 }

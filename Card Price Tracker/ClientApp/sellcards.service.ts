@@ -14,6 +14,10 @@ export class SellcardsService {
     return this.http.get(this.baseUrl + `api/SellCards/allSellCards`);
   }
 
+  GetById(): any {
+    return this.http.get(this.baseUrl + `api/SellCards/cardById`);
+  }
+
   AddSellCards(cardId: string, price: number): any {
     return this.http.post(this.baseUrl + `api/SellCards/addSellCards`, {});
   }
@@ -29,5 +33,6 @@ export class SellcardsService {
   GetCardId(cardId: string): any {
     return this.http.get('https://api.scryfall.com/cards/${cardId}')
   }
+
 
 }

@@ -31,6 +31,19 @@ namespace Card_Price_Tracker.Controllers
 
         }
 
+        [HttpGet("cardByID")]
+        public SellCards cardById(string cardId)
+        {
+            ClaimsPrincipal currentUser = this.User;
+            string currentUserID = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
+            SellCards result = new SellCards();
+            result = SellCardsContext.SellCards.Where(F => F.CardId == cardId && F.UserId == currentUserID).First();
+
+
+            return result;
+
+        }
+
         [HttpPost("addSellCards")]
         public SellCards addToSellCards(string cardId, decimal price)
         {
